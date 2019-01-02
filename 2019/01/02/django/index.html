@@ -5,20 +5,10 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="django, jay">
-    <meta name="description" content="HTML标签 - 承载内容 - contentCSS - 渲染页面 - display
-选择器
-通配符选择器
-标签选择器
-类选择器
-ID选择器
-属性选择器
-后代选择器 / 父子选择器
-兄弟选择器 / 相邻兄弟选择器
-伪类 / 伪元素
-
-
-就">
+    <meta name="keywords" content="Django 的搭建, jay">
+    <meta name="description" content="虚拟环境:安装: pip install virtualenv
+使用: virtualenv --no-site-packages -p D:\python3\python.exe name
+    --no-site-packages: ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -26,7 +16,7 @@ ID选择器
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>django | jay</title>
+    <title>Django 的搭建 | jay</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -277,13 +267,13 @@ ID选择器
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        django
+                        Django 的搭建
                     </div>
                 </div>
             </div>
@@ -305,72 +295,56 @@ ID选择器
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2018-12-29
+                    <i class="fa fa-clock-o fa-fw"></i>2019-01-02
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>HTML标签 - 承载内容 - content<br>CSS - 渲染页面 - display</p>
-<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><ul>
-<li>通配符选择器</li>
-<li>标签选择器</li>
-<li>类选择器</li>
-<li>ID选择器</li>
-<li>属性选择器</li>
-<li>后代选择器 / 父子选择器</li>
-<li>兄弟选择器 / 相邻兄弟选择器</li>
-<li>伪类 / 伪元素</li>
-</ul>
-<ul>
-<li>就近原则/具体性原则/重要性原则</li>
-<li>盒子模型（内容-padding-border-背景图-背景色-margin）</li>
-<li>常用样式属性和常用属性值<br>JavaScript - 交互行为 - behavior</li>
-<li>语法规范 - ECMAScript</li>
-<li>BOM - 浏览器对象模型 - window</li>
-<li><p>DOM - 文档对象模型 - document</p>
-<ul>
-<li>getElementById() / getElementsByTagName() / getElementsByClassName() / querySelector() / querySelectorAll()</li>
-<li>createElement() / appendChild() / insertBefore()</li>
-<li>removeChild()</li>
-<li>innerHTML / textContent / className / style</li>
-<li>parentNode / children / prevSibling / nextSibling</li>
-<li>addEventListener / removeEventListener</li>
-</ul>
-<h2 id="jQuery-—-gt-window-window-jQuery"><a href="#jQuery-—-gt-window-window-jQuery" class="headerlink" title="jQuery —&gt; window.$ / window.jQuery"></a>jQuery —&gt; window.$ / window.jQuery</h2><ul>
-<li>$(‘样式表选择器’)：获取页面元素返回jQuery对象</li>
-<li>$(‘&lt;标签&gt;’)：创建新元素得到jQuery对象</li>
-<li>$(原生JavaScript对象)：将原生JS对象转成jQuery对象</li>
-<li>$(function() {})：绑定页面加载完成之后要执行的回调函数</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>通过PyCharm创建Python项目 —&gt; hellodjango</li>
-<li>在Terminal的虚拟环境中安装依赖项 —&gt;<br>pip install django pymysql django-redis djangorestframework pillow<br>pip check<br>pip freeze &gt; requirements.txt</li>
-<li>创建Django项目 —&gt;<br>django-admin startproject hellodjango .</li>
-<li>运行项目 —&gt;<br>python manage.py runserver<br><a href="http://localhost:8000" target="_blank" rel="noopener">http://localhost:8000</a><br><a href="http://127.0.0.1:8000" target="_blank" rel="noopener">http://127.0.0.1:8000</a><br>python manage.py runserver 0.0.0.0:80<br><a href="http://localhost" target="_blank" rel="noopener">http://localhost</a><br><a href="http://127.0.0.1" target="_blank" rel="noopener">http://127.0.0.1</a><br><a href="http://10.7.187.140" target="_blank" rel="noopener">http://10.7.187.140</a></li>
-<li>修改配置文件 —&gt; hellodjango/settings.py<br>LANGUAGE_CODE = ‘zh-hans’<br>TIME_ZONE = ‘Asia/Chongqing’<br>DATABASES = {<br>‘default’: {<pre><code>&apos;BACKEND&apos;: &apos;....mysql&apos;,
-&apos;NAME&apos;: &apos;&apos;
-&apos;HOST&apos;: &apos;&apos;,
-&apos;PORT&apos;: 3306,
-&apos;USER&apos;: &apos;&apos;,
-&apos;PASSWORD&apos;: &apos;&apos;,
-&apos;TIME_ZONE&apos;: &apos;Asia/Chongqing&apos;,
-</code></pre>}<br>}</li>
-<li>修改init.py文件<br>import pymysql</li>
-</ol>
-<p>pymysql.install_as_MySQLdb()</p>
-<ol>
-<li>生成Django自带的数据表<br>python manage.py migrate</li>
-<li>创建后台管理员账号<br>python manage.py createsuperuser</li>
-</ol>
-<p>Unix - BSD - FreeBSD - Macintosh - macOS - iOS</p>
-<p>Unix - MINIX - Linux - Android</p>
-<p>Unix - AIX / HP-UX / Solaris</p>
-<p>Django / Flask / Tornado</p>
-
+                <h2 id="虚拟环境"><a href="#虚拟环境" class="headerlink" title="虚拟环境:"></a>虚拟环境:</h2><pre><code>安装: pip install virtualenv
+使用: virtualenv --no-site-packages -p D:\python3\python.exe name
+    --no-site-packages: 表示创建的虚拟环境为纯净的环境，不安装有其他的库
+    -p: 表示虚拟环境中的python版本
+pip使用
+    pip list: 插看安装的库
+    pip install xxx: 安装
+激活虚拟环境
+    Windows: 直接执行activate命令
+    Mac/Linux/Ubuntu: 直接执行source activate命令
+退出虚拟环境
+    Windows/Mac/Linux/Ubuntu: 直接执行deactivate
+</code></pre><h2 id="Django项目"><a href="#Django项目" class="headerlink" title="Django项目"></a>Django项目</h2><pre><code>创建: django-amdin startproject 项目名称
+启动
+    启动命令: python manage.py runserver。默认IP为127.0.0.1  默认端口为8000
+    修改启动端口: python manage.py runserver 端口
+    修改IP和端口: python manage.py runserver IP:端口
+    IP参数: 如果为0.0.0.0表示任何人都可以通过公网IP访问django项目
+    端口PORT参数: 如果端口设置为80，表示该端口可以不用写
+</code></pre><h2 id="数据库准备工作"><a href="#数据库准备工作" class="headerlink" title="数据库准备工作"></a>数据库准备工作</h2><pre><code>settings.py中配置
+    USER参数: 访问用户
+    PASSWORD参数: 密码
+    HOST参数: 访问数据库的地址
+    PORT参数: 访问数据库的端口
+    NAME参数: 数据库名
+    &apos;OPTIONS&apos;:{&apos;isolation_level&apos;:None}
+安装pymysql
+    使用pymysql连接数据库: 因为python3没有MySQLdb驱动，无法直接连接MySQL
+    在工程目录的__init__.py文件中定义  pymysql.install_as_MySQLdb()
+迁移
+    第一次迁移: python manege.py migrate
+    除开第一次迁移
+        生成迁移文件: python manage.py makemigrations
+        执行迁移文件: python manage.py migrate
+插入管理员账号
+    python manage.py createsuperuser
+</code></pre><h2 id="Django模式"><a href="#Django模式" class="headerlink" title="Django模式"></a>Django模式</h2><pre><code>M
+    模型层: 定义模型和数据库中的表之间的关联关系
+V
+    视图层: 定义业务逻辑
+T
+    模板: HTML页面
+</code></pre>
             </div>
             <hr>
 
@@ -508,7 +482,7 @@ ID选择器
                     <span class="reprint-tip">Reprint please specify: </span>
                     <a href="http://yoursite.com" class="b-link-green">jay</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/12/29/django环境搭建/" class="b-link-green">django</a>
+                    <a href="/2019/01/02/django/" class="b-link-green">Django 的搭建</a>
                 </p>
             </div>
         </div>
@@ -530,7 +504,7 @@ ID选择器
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">Previous</div>
+            <div class="article-badge left-badge text-color">Current</div>
             <div class="card">
                 <a href="/2019/01/02/django/">
                     <div class="card-image">
@@ -546,9 +520,9 @@ ID选择器
 使用: virtualenv --no-site-packages -p D:\python3\python.exe name
     --no-site-packages: </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-user fa-fw"></i>
@@ -557,6 +531,7 @@ ID选择器
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -565,21 +540,32 @@ ID选择器
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">Next</div>
             <div class="card">
-                <a href="/2018/12/25/zz1/">
+                <a href="/2018/12/29/django环境搭建/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="mysql">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="django">
                         
-                        <span class="card-title">mysql</span>
+                        <span class="card-title">django</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">– 创建人力资源管理系统数
-据库drop database if exists HRS;create database HRS default charset utf8;– 切换数据库上下文环境use HRS;– 删除表drop table</div>
+                    <div class="summary">HTML标签 - 承载内容 - contentCSS - 渲染页面 - display
+选择器
+通配符选择器
+标签选择器
+类选择器
+ID选择器
+属性选择器
+后代选择器 / 父子选择器
+兄弟选择器 / 相邻兄弟选择器
+伪类 / 伪元素
+
+
+就</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-25
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-29
                             </span>
                         <span class="publish-author">
                             
