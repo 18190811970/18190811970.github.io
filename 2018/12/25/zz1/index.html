@@ -5,8 +5,9 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="jay">
-    <meta name="description" content="– 创建人力资源管理系统数据库drop database if exists HRS;create database HRS default charset utf8;– 切换数据库上下文环境use HRS;– 删除表drop table ">
+    <meta name="keywords" content="mysql, jay">
+    <meta name="description" content="– 创建人力资源管理系统数
+据库drop database if exists HRS;create database HRS default charset utf8;– 切换数据库上下文环境use HRS;– 删除表drop table">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>jay</title>
+    <title>mysql | jay</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -265,13 +266,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        
+                        mysql
                     </div>
                 </div>
             </div>
@@ -300,7 +301,8 @@
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>– 创建人力资源管理系统数据库<br>drop database if exists HRS;<br>create database HRS default charset utf8;<br>– 切换数据库上下文环境<br>use HRS;<br>– 删除表<br>drop table if exists TbEmp;<br>drop table if exists TbDept;<br>– 创建部门表<br>create table TbDept<br>(<br>deptno tinyint primary key,    – 部门编号<br>dname varchar(10) not null,    – 部门名称<br>dloc varchar(20) not null    – 部门所在地<br>);<br>– 添加部门记录<br>insert into TbDept values (10, ‘会计部’, ‘北京’);<br>insert into TbDept values (20, ‘研发部’, ‘成都’);<br>insert into TbDept values (30, ‘销售部’, ‘重庆’);<br>insert into TbDept values (40, ‘运维部’, ‘深圳’);<br>– 创建员工表<br>create table TbEmp<br>(<br>empno int primary key,        – 员工编号<br>ename varchar(20) not null,    – 员工姓名<br>job varchar(20) not null,    – 员工职位<br>mgr int,                    – 主管编号<br>sal int not null,            – 员工月薪<br>comm int,                    – 每月补贴<br>dno tinyint                    – 所在部门编号<br>);<br>– 添加外键约束<br>alter table TbEmp add constraint fk_dno foreign key (dno) references TbDept(deptno);<br>– 添加员工记录<br>insert into TbEmp values (7800, ‘张三丰’, ‘总裁’, null, 9000, 1200, 20);<br>insert into TbEmp values (2056, ‘乔峰’, ‘分析师’, 7800, 5000, 1500, 20);<br>insert into TbEmp values (3088, ‘李莫愁’, ‘设计师’, 2056, 3500, 800, 20);<br>insert into TbEmp values (3211, ‘张无忌’, ‘程序员’, 2056, 3200, null, 20);<br>insert into TbEmp values (3233, ‘丘处机’, ‘程序员’, 2056, 3400, null, 20);<br>insert into TbEmp values (3251, ‘张翠山’, ‘程序员’, 2056, 4000, null, 20);<br>insert into TbEmp values (5566, ‘宋远桥’, ‘会计师’, 7800, 4000, 1000, 10);<br>insert into TbEmp values (5234, ‘郭靖’, ‘出纳’, 5566, 2000, null, 10);<br>insert into TbEmp values (3344, ‘黄蓉’, ‘销售主管’, 7800, 3000, 800, 30);<br>insert into TbEmp values (1359, ‘胡一刀’, ‘销售员’, 3344, 1800, 200, 30);<br>insert into TbEmp values (4466, ‘苗人凤’, ‘销售员’, 3344, 2500, null, 30);<br>insert into TbEmp values (3244, ‘欧阳锋’, ‘程序员’, 3088, 3200, null, 20);<br>insert into TbEmp values (3577, ‘杨过’, ‘会计’, 5566, 2200, null, 10);<br>insert into TbEmp values (3588, ‘朱九真’, ‘会计’, 5566, 2500, null, 10);</p>
+                <p>– 创建人力资源管理系统数</p>
+<p>据库<br>drop database if exists HRS;<br>create database HRS default charset utf8;<br>– 切换数据库上下文环境<br>use HRS;<br>– 删除表<br>drop table if exists TbEmp;<br>drop table if exists TbDept;<br>– 创建部门表<br>create table TbDept<br>(<br>deptno tinyint primary key,    – 部门编号<br>dname varchar(10) not null,    – 部门名称<br>dloc varchar(20) not null    – 部门所在地<br>);<br>– 添加部门记录<br>insert into TbDept values (10, ‘会计部’, ‘北京’);<br>insert into TbDept values (20, ‘研发部’, ‘成都’);<br>insert into TbDept values (30, ‘销售部’, ‘重庆’);<br>insert into TbDept values (40, ‘运维部’, ‘深圳’);<br>– 创建员工表<br>create table TbEmp<br>(<br>empno int primary key,        – 员工编号<br>ename varchar(20) not null,    – 员工姓名<br>job varchar(20) not null,    – 员工职位<br>mgr int,                    – 主管编号<br>sal int not null,            – 员工月薪<br>comm int,                    – 每月补贴<br>dno tinyint                    – 所在部门编号<br>);<br>– 添加外键约束<br>alter table TbEmp add constraint fk_dno foreign key (dno) references TbDept(deptno);<br>– 添加员工记录<br>insert into TbEmp values (7800, ‘张三丰’, ‘总裁’, null, 9000, 1200, 20);<br>insert into TbEmp values (2056, ‘乔峰’, ‘分析师’, 7800, 5000, 1500, 20);<br>insert into TbEmp values (3088, ‘李莫愁’, ‘设计师’, 2056, 3500, 800, 20);<br>insert into TbEmp values (3211, ‘张无忌’, ‘程序员’, 2056, 3200, null, 20);<br>insert into TbEmp values (3233, ‘丘处机’, ‘程序员’, 2056, 3400, null, 20);<br>insert into TbEmp values (3251, ‘张翠山’, ‘程序员’, 2056, 4000, null, 20);<br>insert into TbEmp values (5566, ‘宋远桥’, ‘会计师’, 7800, 4000, 1000, 10);<br>insert into TbEmp values (5234, ‘郭靖’, ‘出纳’, 5566, 2000, null, 10);<br>insert into TbEmp values (3344, ‘黄蓉’, ‘销售主管’, 7800, 3000, 800, 30);<br>insert into TbEmp values (1359, ‘胡一刀’, ‘销售员’, 3344, 1800, 200, 30);<br>insert into TbEmp values (4466, ‘苗人凤’, ‘销售员’, 3344, 2500, null, 30);<br>insert into TbEmp values (3244, ‘欧阳锋’, ‘程序员’, 3088, 3200, null, 20);<br>insert into TbEmp values (3577, ‘杨过’, ‘会计’, 5566, 2200, null, 10);<br>insert into TbEmp values (3588, ‘朱九真’, ‘会计’, 5566, 2500, null, 10);</p>
 <p>– 查询薪资最高的员工姓名和工资</p>
 <p>– 查询员工的姓名和年薪((月薪+补贴)*12)</p>
 <p>– 查询有员工的部门的编号和人数</p>
@@ -449,7 +451,7 @@
                     <span class="reprint-tip">Reprint please specify: </span>
                     <a href="http://yoursite.com" class="b-link-green">jay</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/12/25/zz1/" class="b-link-green"></a>
+                    <a href="/2018/12/25/zz1/" class="b-link-green">mysql</a>
                 </p>
             </div>
         </div>
@@ -477,13 +479,14 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="mysql">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">mysql</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">– 创建人力资源管理系统数据库drop database if exists HRS;create database HRS default charset utf8;– 切换数据库上下文环境use HRS;– 删除表drop table </div>
+                    <div class="summary">– 创建人力资源管理系统数
+据库drop database if exists HRS;create database HRS default charset utf8;– 切换数据库上下文环境use HRS;– 删除表drop table</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-25
@@ -505,17 +508,18 @@
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">Next</div>
             <div class="card">
-                <a href="/2018/12/21/hello-world/">
+                <a href="/2018/12/21/git操作/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="nihao">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">nihao</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex</div>
+                    <div class="summary">git常用命令总结
+　　github和gitlab等等一系列的分布式代码托管服务器方便我们开发人员在小组内开发项目，说起分布式代码托管就给大家提一下另外一代码托管SVN,当然他不是分布式的，而是集中式的代码托管，有兴趣的可以查阅资料了解一下</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-21
