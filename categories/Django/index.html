@@ -5,8 +5,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Tags, jay">
-    <meta name="description" content="Tags | jay">
+    <meta name="keywords" content="Category: Django, jay">
+    <meta name="description" content="Category: Django | jay">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Tags | jay</title>
+    <title>Category: Django | jay</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -293,43 +293,53 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
     
 
-<div id="tags" class="container chip-container">
+<div id="category-cloud" class="container chip-container">
     <div class="card">
         <div class="card-content">
-            <div class="tag-title center-align">Post Tags</div>
+            <div class="tag-title center-align">Post Categories</div>
             <div class="tag-chips">
                 
                 
-                <a href="/tags/Django基本知识/" title="Django基本知识: 1">
+                
+                <a href="/categories/Django/" title="Django: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="Django基本知识" style="background-color: #F9EBEA;">Django基本知识
+                             chip-active " style="background-color: #F9EBEA;">Django
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/添加/" title="添加: 1">
+                <a href="/categories/图片异常/" title="图片异常: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="添加" style="background-color: #F5EEF8;">添加
+                             chip-default " style="background-color: #F5EEF8;">图片异常
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/操作指令/" title="操作指令: 2">
+                <a href="/categories/mysql/" title="mysql: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="操作指令" style="background-color: #D5F5E3;">操作指令
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/操作篇/" title="操作篇: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default " data-tagname="操作篇" style="background-color: #E8F8F5;">操作篇
+                             chip-default " style="background-color: #D5F5E3;">mysql
                         <span class="tag-length">1</span>
                     </span>
                 </a>
+                
+                
+                <a href="/categories/linux/" title="linux: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " style="background-color: #E8F8F5;">linux
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/git基础/" title="git基础: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " style="background-color: #FEF9E7;">git基础
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
                 
             </div>
         </div>
@@ -337,31 +347,59 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 </div>
 
     
-    <link rel="stylesheet" type="text/css" href="/libs/jqcloud/jqcloud.css">
-<style type="text/css">
-    #tag-wordcloud {
-        width: 100%;
-        height: 300px;
-    }
-</style>
 
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="tag-wordcloud" class="card-content"></div>
-    </div>
-</div>
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2018/12/29/Django须知/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Django">
+                            
+                            <span class="card-title">Django</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary">Django ***
+虚拟环境
+安装: pip install virtualenv
+使用: virtualenv --no-site-pa</div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-29
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Django/" class="post-category" target="_blank">
+                                    Django
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
 
-<script type="text/javascript" src="/libs/jqcloud/jqcloud-1.0.4.min.js"></script>
-<script type="text/javascript">
-    
-
-    $('#tag-wordcloud').jQCloud([{"text":"Django基本知识","weight":1,"link":"http://yoursite.com/tags/Django基本知识/"},{"text":"添加","weight":1,"link":"http://yoursite.com/tags/添加/"},{"text":"操作指令","weight":2,"link":"http://yoursite.com/tags/操作指令/"},{"text":"操作篇","weight":1,"link":"http://yoursite.com/tags/操作篇/"}], {
-        autoResize: true
-    });
-</script>
-    
-
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Django基本知识/" target="_blank">
+                            <span class="chip bg-color">Django基本知识</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
+
 
 <footer class="page-footer bg-color">
     <div class="container row center-align">

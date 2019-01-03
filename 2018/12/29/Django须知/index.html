@@ -5,9 +5,12 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="mysql, jay">
-    <meta name="description" content="– 创建人力资源管理系统数
-据库drop database if exists HRS;create database HRS default charset utf8;– 切换数据库上下文环境use HRS;– 删除表drop table">
+    <meta name="keywords" content="Django, jay">
+    <meta name="description" content="Django ***
+虚拟环境
+安装: pip install virtualenv
+使用: virtualenv --no-site-packages -p D:\python3\python.exe name
+    --no-site">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>mysql | jay</title>
+    <title>Django | jay</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -266,13 +269,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        mysql
+                        Django
                     </div>
                 </div>
             </div>
@@ -292,8 +295,8 @@
             
             <div class="article-tag">
                 
-                <a href="/tags/操作指令/" target="_blank">
-                    <span class="chip bg-color">操作指令</span>
+                <a href="/tags/Django基本知识/" target="_blank">
+                    <span class="chip bg-color">Django基本知识</span>
                 </a>
                 
             </div>
@@ -303,34 +306,191 @@
                 <span class="post-cate">
                     <i class="fa fa-bookmark fa-fw icon-category"></i>
                     
-                    <a href="/categories/mysql/" class="post-category" target="_blank">
-                        mysql
+                    <a href="/categories/Django/" class="post-category" target="_blank">
+                        Django
                     </a>
                     
                 </span>
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2019-01-02
+                    <i class="fa fa-clock-o fa-fw"></i>2018-12-29
                 </span>
             </div>
         </div>
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>– 创建人力资源管理系统数</p>
-<p>据库<br>drop database if exists HRS;<br>create database HRS default charset utf8;<br>– 切换数据库上下文环境<br>use HRS;<br>– 删除表<br>drop table if exists TbEmp;<br>drop table if exists TbDept;<br>– 创建部门表<br>create table TbDept<br>(<br>deptno tinyint primary key,    – 部门编号<br>dname varchar(10) not null,    – 部门名称<br>dloc varchar(20) not null    – 部门所在地<br>);<br>– 添加部门记录<br>insert into TbDept values (10, ‘会计部’, ‘北京’);<br>insert into TbDept values (20, ‘研发部’, ‘成都’);<br>insert into TbDept values (30, ‘销售部’, ‘重庆’);<br>insert into TbDept values (40, ‘运维部’, ‘深圳’);<br>– 创建员工表<br>create table TbEmp<br>(<br>empno int primary key,        – 员工编号<br>ename varchar(20) not null,    – 员工姓名<br>job varchar(20) not null,    – 员工职位<br>mgr int,                    – 主管编号<br>sal int not null,            – 员工月薪<br>comm int,                    – 每月补贴<br>dno tinyint                    – 所在部门编号<br>);<br>– 添加外键约束<br>alter table TbEmp add constraint fk_dno foreign key (dno) references TbDept(deptno);<br>– 添加员工记录<br>insert into TbEmp values (7800, ‘张三丰’, ‘总裁’, null, 9000, 1200, 20);<br>insert into TbEmp values (2056, ‘乔峰’, ‘分析师’, 7800, 5000, 1500, 20);<br>insert into TbEmp values (3088, ‘李莫愁’, ‘设计师’, 2056, 3500, 800, 20);<br>insert into TbEmp values (3211, ‘张无忌’, ‘程序员’, 2056, 3200, null, 20);<br>insert into TbEmp values (3233, ‘丘处机’, ‘程序员’, 2056, 3400, null, 20);<br>insert into TbEmp values (3251, ‘张翠山’, ‘程序员’, 2056, 4000, null, 20);<br>insert into TbEmp values (5566, ‘宋远桥’, ‘会计师’, 7800, 4000, 1000, 10);<br>insert into TbEmp values (5234, ‘郭靖’, ‘出纳’, 5566, 2000, null, 10);<br>insert into TbEmp values (3344, ‘黄蓉’, ‘销售主管’, 7800, 3000, 800, 30);<br>insert into TbEmp values (1359, ‘胡一刀’, ‘销售员’, 3344, 1800, 200, 30);<br>insert into TbEmp values (4466, ‘苗人凤’, ‘销售员’, 3344, 2500, null, 30);<br>insert into TbEmp values (3244, ‘欧阳锋’, ‘程序员’, 3088, 3200, null, 20);<br>insert into TbEmp values (3577, ‘杨过’, ‘会计’, 5566, 2200, null, 10);<br>insert into TbEmp values (3588, ‘朱九真’, ‘会计’, 5566, 2500, null, 10);</p>
-<p>– 查询薪资最高的员工姓名和工资</p>
-<p>– 查询员工的姓名和年薪((月薪+补贴)*12)</p>
-<p>– 查询有员工的部门的编号和人数</p>
-<p>– 查询所有部门的名称和人数</p>
-<p>– 查询薪资最高的员工(Boss除外)的姓名和工资</p>
-<p>– 查询薪水超过平均薪水的员工的姓名和工资</p>
-<p>– 查询薪水超过其所在部门平均薪水的员工的姓名、部门编号和工资</p>
-<p>– 查询部门中薪水最高的人姓名、工资和所在部门名称</p>
-<p>– 查询主管的姓名和职位</p>
-<p>– 查询薪资排名4~6名的员工姓名和工资<br>Hao(957658)  18:43:10<br>题目中所有的工资指的是月薪，不包括补贴</p>
+                <pre><code>Django ***
+虚拟环境
+安装: pip install virtualenv
+使用: virtualenv --no-site-packages -p D:\python3\python.exe name
+    --no-site-packages: 表示创建的虚拟环境为纯净的环境，不安装有其他的库
+    -p: 表示虚拟环境中的python版本
 
+pip使用
+    pip list: 插看安装的库
+    pip install xxx: 安装xxx
+
+激活虚拟环境
+    Windows: 直接执行activate命令
+    Mac/Linux/Ubuntu: 直接执行source activate命令
+
+退出虚拟环境
+    Windows/Mac/Linux/Ubuntu: 直接执行deactivate
+</code></pre><h3 id="Django项目"><a href="#Django项目" class="headerlink" title="Django项目"></a>Django项目</h3><pre><code>创建项目: django-amdin startproject 项目名称
+创建应用: python manage.py startapp 应用名称
+启动
+    启动命令: python manage.py runserver。默认IP为127.0.0.1  默认端口为8000
+    修改启动端口: python manage.py runserver 端口
+    修改IP和端口: python manage.py runserver IP:端口
+    IP参数: 如果为0.0.0.0表示任何人都可以通过公网IP访问django项目
+    端口PORT参数: 如果端口设置为80，表示该端口可以不用写
+</code></pre><h3 id="Django模式"><a href="#Django模式" class="headerlink" title="Django模式"></a>Django模式</h3><pre><code>M
+    模型层: 定义模型和数据库中的表之间的关联关系
+V
+    视图层: 定义业务逻辑
+T
+    模板: HTML页面
+</code></pre><h3 id="数据库准备工作"><a href="#数据库准备工作" class="headerlink" title="数据库准备工作  ***"></a>数据库准备工作  ***</h3><pre><code>settings.py中配置 
+    USER参数: 访问用户
+    PASSWORD参数: 密码
+    HOST参数: 访问数据库的地址
+    PORT参数: 访问数据库的端口
+    NAME参数: 数据库名
+    &apos;OPTIONS&apos;:{&apos;isolation_level&apos;:None}
+安装pymysql
+    使用pymysql连接数据库: 因为python3没有MySQLdb驱动，无法直接连接MySQL
+    在工程目录的__init__.py文件中定义  pymysql.install_as_MySQLdb()
+迁移
+    第一次迁移: python manege.py migrate
+    除开第一次迁移
+        生成迁移文件: python manage.py makemigrations
+        执行迁移文件: python manage.py migrate
+插入管理员账号
+    python manage.py createsuperuser
+</code></pre><p>​        </p>
+<h3 id="模型层"><a href="#模型层" class="headerlink" title="模型层"></a>模型层</h3><pre><code>概念
+    objects: 管理器，默认模型的属性
+    ORM(objects relationship mapping): 对象关系映射
+创建
+    create()方法: 模型名.objects.create(字段1=值,字段2=值)
+    save()方法: 模型对象.save()
+
+    def add_stu(request):
+        实现插入数据
+        实现的第一中方式:
+        Student.objects.create(s_name=&apos;小明&apos;)
+        实现的第二中方法:
+        stu = Student()
+        stu.s_name = &apos;黄老邪&apos;
+        stu.s_gender = 1
+        stu.save()
+        return HttpResponse(&apos;创建学生成功&apos;)
+
+删除
+    delete()方法: 模型名.objects.filter(条件).delete()
+
+    def del_stu(request):
+        1.获取删除对象 ， filter（条件）
+        2.实现删除方法 ， delete
+        Student.objects.filter(id=2).delete()
+        return HttpResponse(&apos;删除成功&apos;)
+
+修改or更新
+    update()方法: 模型名.objects.filter(条件).update(字段1=值,字段2=值)
+    save()方法: 模型对象.save()
+    update()和save()的区别: 是否更新使用auto_now约束条件的字段
+
+    def up_stu(request):
+        # 实现更新
+        # 1.实现更新的数据 filter（条件）
+        # 2.实现更新的方法 update（）
+        # 更新的第一中方法，只更新数据 ，不更新时间
+        # Student.objects.filter(id=1).update(s_name=&apos;风清扬&apos;)
+        # 更新的第二中方法 ,即更新时间也更新数据
+        stu = Student.objects.filter(id=1).first()
+        stu.s_name = &apos;杨过&apos;
+        stu.save()
+        return HttpResponse(&apos;更新学生信息&apos;)
+查询
+    filter()方法,查询满足条件的信息: 模型名.objects.filter(条件)
+         # 查询ID=1的学生信息 ，filter()
+        stu = Student.objects.filter(id=1)
+    all()方法: 查询所有
+        Student.objects.all()
+    get()方法: 查询指定的条件
+        # 1.get()取唯一的一个对象
+        # 2.get(条件)条件必须成立
+        stu = Student.objects.get(id=4)
+        print(stu)
+
+    first()方法: 取出结果中的第一个对象
+        stu = Student.objects.filter(id=1).first()
+
+    exclude()方法: 查询出不满足条件的信息: 模型名.objects.exclude(条件)
+        stus = Student.objects.exclude(s_gender=0) 
+
+    order_by()方法: 升序order_by(&apos;id&apos;)  降序order_by(&apos;-id&apos;)
+        stus = Student.objects.order_by(&apos;-id&apos;)
+
+    values()方法: 取查询对象中的字段
+        stus = Student.objects.all().values(&apos;s_name&apos;)
+
+    exists(): 判断结果是否存在,存在返回True,否则返回False
+        a = Student.objects.filter(s_name=&apos;小张&apos;).exists()
+
+    count()方法: 计算结果的条数
+        b = Student.objects.filter(s_gender=1).count()
+
+    pk: 主键（就是id）
+        stus = Student.objects.filter(id__in=[1,2,3,4,5,6])
+        stus = Student.objects.filter(pk__in=[1,2,3,4,5,6])
+
+    运算符
+        语法:  字段__contains
+        contains: 包含
+            stus = Student.objects.filter(s_name__contains=&apos;黄&apos;)
+
+        startswith: 以什么开头
+            stus = Student.objects.filter(s_name__startswith=&apos;黄&apos;)
+
+        endswith: 以什么结束
+            stus = Student.objects.filter(s_name__endswith=&apos;邪&apos;)
+
+        in: 在某个范围之内
+            stus = Student.objects.filter(id__in=[1,2,3,4,5,6])
+
+            gt：大于,gte:大于等
+            stus = Student.objects.filter(s_age__gte=18, s_age__lt=20)
+            lt：小于 lte :小于等于
+
+
+    聚合
+        导入：from django.db.models import Max,Avg, Min, Sum, Count
+            age_avg = Student.objects.all().aggregate(Avg(&apos;s_age&apos;))
+            age_sum = Student.objects.all().aggregate(Sum(&apos;s_age&apos;))
+
+        语法: 模型名.objects.all().aggregate(Sum(字段))
+    Q
+        与1: Q(条件1), Q(条件2)
+             stus = Student.objects.filter(Q(s_age__gte=18) ， Q(s_age__lt=20))
+        与2: Q(条件1) &amp; Q(条件2)
+             stus = Student.objects.filter(Q(s_age__gte=18) &amp; Q(s_age__lt=20))
+        或: Q(条件1) | Q(条件2)
+             stus = Student.objects.filter(Q(s_age__gte=18) | Q(s_age__lt=20))
+        非: ~Q(条件1)
+            stus = Student.objects.filter(~Q(s_age__gte=18))
+    F
+        用于比较两个字段,可使用+,-符号
+        模型名.objects.filter(wuli__gt=F(&apos;math&apos;)-10)
+            查询物理成绩大于数学的学生
+            stus = Student.objects.filter(wuli__gt=F(&apos;math&apos;))
+            print()
+
+
+            return HttpResponse(&apos;查询所有学生信息&apos;)
+</code></pre>
             </div>
             <hr>
 
@@ -468,7 +628,7 @@
                     <span class="reprint-tip">Reprint please specify: </span>
                     <a href="http://yoursite.com" class="b-link-green">jay</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/01/02/zz1/" class="b-link-green">mysql</a>
+                    <a href="/2018/12/29/Django须知/" class="b-link-green">Django</a>
                 </p>
             </div>
         </div>
@@ -492,17 +652,18 @@
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">Previous</div>
             <div class="card">
-                <a href="/2019/01/02/mac/">
+                <a href="/2019/01/02/zz1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="mac图片无法显示">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="mysql">
                         
-                        <span class="card-title">mac图片无法显示</span>
+                        <span class="card-title">mysql</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">hexo的图片的玩法给自己的文章添加图片在Markdown中![图片名](url)，这里面的url若是网上的则直接弄过来就可以；坑为本地上传的图片地址，在source文件夹中创建一个文件夹img用来保存图片，然后url写成/img/图片名.</div>
+                    <div class="summary">– 创建人力资源管理系统数
+据库drop database if exists HRS;create database HRS default charset utf8;– 切换数据库上下文环境use HRS;– 删除表drop table</div>
                     <div class="publish-info">
                         <span class="publish-date">
                             <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-02
@@ -511,8 +672,8 @@
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/图片异常/" class="post-category" target="_blank">
-                                    图片异常
+                            <a href="/categories/mysql/" class="post-category" target="_blank">
+                                    mysql
                                 </a>
                             
                             
@@ -522,8 +683,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/添加/" target="_blank">
-                        <span class="chip bg-color">添加</span>
+                    <a href="/tags/操作指令/" target="_blank">
+                        <span class="chip bg-color">操作指令</span>
                     </a>
                     
                 </div>
@@ -535,31 +696,28 @@
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">Next</div>
             <div class="card">
-                <a href="/2018/12/29/Django须知/">
+                <a href="/2018/12/21/git操作/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Django">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="git操作">
                         
-                        <span class="card-title">Django</span>
+                        <span class="card-title">git操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">Django ***
-虚拟环境
-安装: pip install virtualenv
-使用: virtualenv --no-site-packages -p D:\python3\python.exe name
-    --no-site</div>
+                    <div class="summary">git常用命令总结
+　　github和gitlab等等一系列的分布式代码托管服务器方便我们开发人员在小组内开发项目，说起分布式代码托管就给大家提一下另外一代码托管SVN,当然他不是分布式的，而是集中式的代码托管，有兴趣的可以查阅资料了解一下</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-29
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-21
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Django/" class="post-category" target="_blank">
-                                    Django
+                            <a href="/categories/git基础/" class="post-category" target="_blank">
+                                    git基础
                                 </a>
                             
                             
@@ -569,8 +727,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Django基本知识/" target="_blank">
-                        <span class="chip bg-color">Django基本知识</span>
+                    <a href="/tags/操作篇/" target="_blank">
+                        <span class="chip bg-color">操作篇</span>
                     </a>
                     
                 </div>
